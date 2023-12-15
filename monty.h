@@ -65,7 +65,7 @@ void free_stack(stack_t *head);
 void my_pop(stack_t **hd, unsigned int line_num);
 void my_swap(stack_t **hd, unsigned int count);
 void my_add(stack_t **hd, unsigned int count);
-void f_nop(stack_t **head, unsigned int counter);
+void my_nop(stack_t **hd, unsigned int count);
 void f_sub(stack_t **head, unsigned int counter);
 void f_div(stack_t **head, unsigned int counter);
 void f_mul(stack_t **head, unsigned int counter);
