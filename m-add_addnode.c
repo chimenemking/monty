@@ -1,56 +1,56 @@
 #include "monty.h"
 /**
- * f_add - adds the top two elements of the stack.
- * @head: stack head
- * @counter: line_number
+ * my_add - adds the top two elements of the stack.
+ * @hd: stack head
+ * @count: line_number
  * Return: no return
 */
-void f_add(stack_t **head, unsigned int counter)
+void my_add(stack_t **hd, unsigned int count)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int length = 0, vab;
 
-	h = *head;
+	h = *hd;
 	while (h)
 	{
 		h = h->next;
-		len++;
+		length++;
 	}
-	if (len < 2)
+	if (length < 2)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't add, stack too short\n", count);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*head);
+		free_stack(*hd);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	aux = h->n + h->next->n;
-	h->next->n = aux;
-	*head = h->next;
+	h = *hd;
+	vab = h->n + h->next->n;
+	h->next->n = vab;
+	*hd = h->next;
 	free(h);
 }
 
 /**
- * addnode - add node to the head stack
- * @head: head of the stack
+ * my_addnode - add node to the head stack
+ * @hd: head of the stack
  * @n: new_value
  * Return: no return
 */
-void addnode(stack_t **head, int n)
+void my_addnode(stack_t **hd, int n)
 {
 
-	stack_t *new_node, *aux;
+	stack_t *new_node, *vab;
 
-	aux = *head;
+	vab = *hd;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{ printf("Error\n");
 		exit(0); }
-	if (aux)
-		aux->prev = new_node;
+	if (vab)
+		vab->prev = new_node;
 	new_node->n = n;
-	new_node->next = *head;
+	new_node->next = *hd;
 	new_node->prev = NULL;
-	*head = new_node;
+	*hd = new_node;
 }
