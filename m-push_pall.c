@@ -5,7 +5,7 @@
  * @counter: line_number
  * Return: no return
 */
-void f_push(stack_t **head, unsigned int counter)
+void my_push(stack_t **head, unsigned int counter)
 {
 	int n, j = 0, flag = 0;
 
@@ -43,7 +43,7 @@ void f_push(stack_t **head, unsigned int counter)
  * @counter: no used
  * Return: no return
 */
-void f_pall(stack_t **head, unsigned int counter)
+void my_pall(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	(void)counter;
